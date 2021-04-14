@@ -66,4 +66,19 @@ package body Tuples.Steps is
    begin
       Assert (V = Tuple'(X, Y, Z, W));
    end Then_V_Is_A_Tuple;
+
+   procedure Given_Tuple_A1 (X, Y, Z, W : Float) is
+   begin
+      A1 := Tuple'(X, Y, Z, W);
+   end Given_Tuple_A1;
+
+   procedure Given_Tuple_A2 (X, Y, Z, W : Float) is
+   begin
+      A2 := Tuple'(X, Y, Z, W);
+   end Given_Tuple_A2;
+
+   procedure Then_A1_Plus_A2_Is (X, Y, Z, W : Float) is
+   begin
+      Assert (A1 + A2 = Tuple'(X, Y, Z, W));
+   end Then_A1_Plus_A2_Is;
 end Tuples.Steps;

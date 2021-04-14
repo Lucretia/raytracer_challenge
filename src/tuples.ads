@@ -8,6 +8,12 @@ package Tuples is
    type Tuple_Index is (X, Y, Z, W);
    type Tuple is array (Tuple_Index) of Float;
 
+   function "+" (Left, Right : in Tuple) return Tuple is
+      (Tuple'(X => Left (X) + Right (X),
+              Y => Left (Y) + Right (Y),
+              Z => Left (Z) + Right (Z),
+              W => Left (W) + Right (W)));
+
    function Is_Point (T : in Tuple) return Boolean is (T (W) = 1.0);
    function Is_Vector (T : in Tuple) return Boolean is (T (W) = 0.0);
 

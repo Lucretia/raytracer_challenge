@@ -37,8 +37,19 @@ package Tuples.Steps is
 
    -- @then ^v = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
    procedure Then_V_Is_A_Tuple (X, Y, Z, W : Float);
+
+   -- @given ^a1 ← tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Given_Tuple_A1 (X, Y, Z, W : Float);
+
+   -- @given ^a2 ← tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Given_Tuple_A2 (X, Y, Z, W : Float);
+
+   -- @then ^a1 + a2 = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Then_A1_Plus_A2_Is (X, Y, Z, W : Float);
 private
    A  : Tuple;
    P  : Point;
    V  : Vector;
+   A1 : Tuple;
+   A2 : Tuple;
 end Tuples.Steps;
