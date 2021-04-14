@@ -96,4 +96,9 @@ package body Tuples.Steps is
    begin
       Assert (P1 - P2 = Make_Vector (X, Y, Z));
    end Then_P1_Minus_P2_Is_Vector;
+
+   procedure Then_P_Minus_V_Is_Point (X, Y, Z : Float) is
+   begin
+      Assert (P - V = Make_Point (X, Y, Z));
+   end Then_P_Minus_V_Is_Point;
 end Tuples.Steps;

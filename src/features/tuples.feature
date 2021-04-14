@@ -34,3 +34,8 @@ Feature: Tuples
         Given p1 ← point(3, 2, 1)
             And p2 ← point(5, 6, 7)
         Then p1 - p2 = vector(-2, -4, -6)
+
+    Scenario: Subtracting a vector from a point
+        Given p ← point(3, 2, 1)
+            And v ← vector(5, 6, 7)
+        Then p - v = point(-2, -4, -6)
