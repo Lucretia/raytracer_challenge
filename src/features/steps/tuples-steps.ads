@@ -39,6 +39,6 @@ package Tuples.Steps is
    procedure V_Is_A_Tuple (X, Y, Z, W : Float);
 private
    A : Tuple;
-   P : Tuple;
-   V : Tuple;
+   P : Point;
+   V : Vector;
 end Tuples.Steps;
