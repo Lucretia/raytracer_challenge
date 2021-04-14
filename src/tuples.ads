@@ -26,6 +26,12 @@ package Tuples is
               Z => Left (Z) * Right,
               W => Left (W) * Right));
 
+   function "/" (Left : in Tuple; Right : in Float) return Tuple is
+      (Tuple'(X => Left (X) / Right,
+              Y => Left (Y) / Right,
+              Z => Left (Z) / Right,
+              W => Left (W) / Right));
+
    function Is_Point (T : in Tuple) return Boolean is (T (W) = 1.0);
    function Is_Vector (T : in Tuple) return Boolean is (T (W) = 0.0);
 

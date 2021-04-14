@@ -137,4 +137,9 @@ package body Tuples.Steps is
    begin
       Assert (A * Scalar = Tuple'(X, Y, Z, W));
    end Then_A_Times_Scalar_Is_Tuple;
+
+   procedure Then_A_Divide_By_Scalar_Is_Tuple (Scalar, X, Y, Z, W : Float) is
+   begin
+      Assert (A / Scalar = Tuple'(X, Y, Z, W));
+   end Then_A_Divide_By_Scalar_Is_Tuple;
 end Tuples.Steps;

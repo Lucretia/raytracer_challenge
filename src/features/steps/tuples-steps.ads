@@ -79,6 +79,9 @@ package Tuples.Steps is
 
    -- @then ^a \* ([-+]?\d+\.?\d*) = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_A_Times_Scalar_Is_Tuple (Scalar, X, Y, Z, W : Float);
+
+   -- @then ^a / ([-+]?\d+\.?\d*) = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure Then_A_Divide_By_Scalar_Is_Tuple (Scalar, X, Y, Z, W : Float);
 private
    A  : Tuple;
    P  : Point;
