@@ -21,6 +21,12 @@ package Tuples is
    subtype Point is Tuple;
    subtype Vector is Tuple;
 
+   function "-" (Left, Right : in Point) return Vector is
+      (Vector'(X => Left (X) - Right (X),
+               Y => Left (Y) - Right (Y),
+               Z => Left (Z) - Right (Z),
+               W => Left (W) - Right (W)));
+
    function Make_Point (X1, Y1, Z1 : Float) return Point is (Point'(X => X1, Y => Y1, Z => Z1, W => 1.0));
    function Make_Vector (X1, Y1, Z1 : Float) return Vector is (Vector'(X => X1, Y => Y1, Z => Z1, W => 0.0));
 end Tuples;
