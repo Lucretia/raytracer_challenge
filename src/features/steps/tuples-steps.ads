@@ -58,6 +58,15 @@ package Tuples.Steps is
 
    -- @then ^p - v = point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
    procedure Then_P_Minus_V_Is_Point (X, Y, Z : Float);
+
+   -- @given ^v1 ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Given_Vector_V1 (X, Y, Z : Float);
+
+   -- @and ^v2 ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure And_Given_Vector_V2 (X, Y, Z : Float);
+
+   -- @then ^v1 - v2 = vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Then_V1_Minus_V2_Is_Vector (X, Y, Z : Float);
 private
    A  : Tuple;
    P  : Point;
@@ -66,4 +75,6 @@ private
    A2 : Tuple;
    P1 : Point;
    P2 : Point;
+   V1 : Vector;
+   V2 : Vector;
 end Tuples.Steps;

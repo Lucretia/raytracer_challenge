@@ -101,4 +101,19 @@ package body Tuples.Steps is
    begin
       Assert (P - V = Make_Point (X, Y, Z));
    end Then_P_Minus_V_Is_Point;
+
+   procedure Given_Vector_V1 (X, Y, Z : Float) is
+   begin
+      V1 := Make_Vector (X, Y, Z);
+   end Given_Vector_V1;
+
+   procedure And_Given_Vector_V2 (X, Y, Z : Float) is
+   begin
+      V2 := Make_Vector (X, Y, Z);
+   end And_Given_Vector_V2;
+
+   procedure Then_V1_Minus_V2_Is_Vector (X, Y, Z : Float) is
+   begin
+      Assert (V1 - V2 = Make_Vector (X, Y, Z));
+   end Then_V1_Minus_V2_Is_Vector;
 end Tuples.Steps;
