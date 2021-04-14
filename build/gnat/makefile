@@ -32,10 +32,10 @@ all: run_bdd ray_tracer
 .PHONY: $(RT_BDD) $(STEPS)
 
 # Build up the BDD driver.
-$(RT_BDD): $(GEN_BDD) $(SRCS) $(STEPS)
+$(RT_BDD): $(GEN_BDD) $(SRCS)
 	$(GPRBUILD) -P$(OBJ)/$(RT_BDD).gpr
 
-$(GEN_BDD): ray_tracer.gpr $(FEATURES)
+$(GEN_BDD) &: ray_tracer.gpr $(FEATURES) $(STEPS)
 	$(GNATBDD) -P ray_tracer.gpr
 
 run_bdd: $(RT_BDD)
