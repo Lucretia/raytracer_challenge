@@ -127,4 +127,9 @@ package body Tuples.Steps is
    begin
       Assert (Zero - V = Make_Vector (X, Y, Z));
    end Then_Zero_Minus_V_Is_Vector;
+
+   procedure Then_Tuple_Is_Negative_A (X, Y, Z, W : Float) is
+   begin
+      Assert (-A = Tuple'(X, Y, Z, W));
+   end Then_Tuple_Is_Negative_A;
 end Tuples.Steps;

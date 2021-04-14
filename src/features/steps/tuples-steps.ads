@@ -1,17 +1,17 @@
 package Tuples.Steps is
-   -- @given ^a ← tuple\(([-+]?\d+\.\d+), ([-+]?\d+\.\d+), ([-+]?\d+\.\d+), ([-+]?\d+\.\d+)\)$
+   -- @given ^a ← tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Tuple_A (X, Y, Z, W : Float);
 
-   -- @then ^a.x = ([-+]?\d+\.\d+)$
+   -- @then ^a.x = ([-+]?\d+\.?\d*)$
    procedure Then_A_X_Is (Expected : Float);
 
-   -- @and ^a.y = ([-+]?\d+\.\d+)$
+   -- @and ^a.y = ([-+]?\d+\.?\d*)$
    procedure And_A_Y_Is (Expected : Float);
 
-   -- @and ^a.z = ([-+]?\d+\.\d+)$
+   -- @and ^a.z = ([-+]?\d+\.?\d*)$
    procedure And_A_Z_Is (Expected : Float);
 
-   -- @and ^a.w = ([-+]?\d+\.\d+)$
+   -- @and ^a.w = ([-+]?\d+\.?\d*)$
    procedure And_A_W_Is (Expected : Float);
 
    -- @and ^a is a point$
@@ -26,53 +26,56 @@ package Tuples.Steps is
    -- @and ^a is a vector$
    procedure And_A_Is_A_Vector;
 
-   -- @given ^p ← point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^p ← point\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Point_P (X, Y, Z : Float);
 
-   -- @then ^p = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^p = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_P_Is_A_Tuple (X, Y, Z, W : Float);
 
-   -- @given ^v ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^v ← vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Vector_V (X, Y, Z : Float);
 
-   -- @then ^v = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^v = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_V_Is_A_Tuple (X, Y, Z, W : Float);
 
-   -- @given ^a1 ← tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^a1 ← tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Tuple_A1 (X, Y, Z, W : Float);
 
-   -- @given ^a2 ← tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^a2 ← tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Tuple_A2 (X, Y, Z, W : Float);
 
-   -- @then ^a1 \+ a2 = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^a1 \+ a2 = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_A1_Plus_A2_Is (X, Y, Z, W : Float);
 
-   -- @given ^p1 ← point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^p1 ← point\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Point_P1 (X, Y, Z : Float);
 
-   -- @and ^p2 ← point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @and ^p2 ← point\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure And_Given_Point_P2 (X, Y, Z : Float);
 
-   -- @then ^p1 - p2 = vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^p1 - p2 = vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_P1_Minus_P2_Is_Vector (X, Y, Z : Float);
 
-   -- @then ^p - v = point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^p - v = point\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_P_Minus_V_Is_Point (X, Y, Z : Float);
 
-   -- @given ^v1 ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^v1 ← vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Vector_V1 (X, Y, Z : Float);
 
-   -- @and ^v2 ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @and ^v2 ← vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure And_Given_Vector_V2 (X, Y, Z : Float);
 
-   -- @then ^v1 - v2 = vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^v1 - v2 = vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_V1_Minus_V2_Is_Vector (X, Y, Z : Float);
 
-   -- @given ^zero ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @given ^zero ← vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Zero_Vector (X, Y, Z : Float);
 
-   -- @then ^zero - v = vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^zero - v = vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_Zero_Minus_V_Is_Vector (X, Y, Z : Float);
+
+   -- @then ^-a = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure Then_Tuple_Is_Negative_A (X, Y, Z, W : Float);
 private
    A  : Tuple;
    P  : Point;
