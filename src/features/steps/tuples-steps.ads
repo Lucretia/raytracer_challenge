@@ -44,7 +44,7 @@ package Tuples.Steps is
    -- @given ^a2 ← tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
    procedure Given_Tuple_A2 (X, Y, Z, W : Float);
 
-   -- @then ^a1 + a2 = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   -- @then ^a1 \+ a2 = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
    procedure Then_A1_Plus_A2_Is (X, Y, Z, W : Float);
 private
    A  : Tuple;
