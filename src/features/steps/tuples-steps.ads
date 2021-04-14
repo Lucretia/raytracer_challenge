@@ -25,6 +25,20 @@ package Tuples.Steps is
 
    -- @and ^a is a vector$
    procedure A_Is_A_Vector;
+
+   -- @given ^p ← point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Given_Point_P (X, Y, Z : Float);
+
+   -- @then ^p = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure P_Is_A_Tuple (X, Y, Z, W : Float);
+
+   -- @given ^v ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure Given_Vector_V (X, Y, Z : Float);
+
+   -- @then ^v = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
+   procedure V_Is_A_Tuple (X, Y, Z, W : Float);
 private
    A : Tuple;
+   P : Tuple;
+   V : Tuple;
 end Tuples.Steps;
