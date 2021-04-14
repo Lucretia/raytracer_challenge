@@ -82,6 +82,12 @@ package Tuples.Steps is
 
    -- @then ^a / ([-+]?\d+\.?\d*) = tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_A_Divide_By_Scalar_Is_Tuple (Scalar, X, Y, Z, W : Float);
+
+   -- @then ^magnitude\(v\) = ([-+]?\d+\.?\d*)$
+   procedure Then_Magnitude_Of_V_Is (Result : Float);
+
+   -- @then ^magnitude\(v\) = √([-+]?\d+\.?\d*)$
+   procedure Then_Magnitude_Of_V_Is_Sqrt_Of (Result : Float);
 private
    A  : Tuple;
    P  : Point;

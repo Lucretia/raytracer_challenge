@@ -142,4 +142,14 @@ package body Tuples.Steps is
    begin
       Assert (A / Scalar = Tuple'(X, Y, Z, W));
    end Then_A_Divide_By_Scalar_Is_Tuple;
+
+   procedure Then_Magnitude_Of_V_Is (Result : Float) is
+   begin
+      Assert (Magnitude (V) = Result);
+   end Then_Magnitude_Of_V_Is;
+
+   procedure Then_Magnitude_Of_V_Is_Sqrt_Of (Result : Float) is
+   begin
+      Assert (Magnitude (V) = Sqrt (Result));
+   end Then_Magnitude_Of_V_Is_Sqrt_Of;
 end Tuples.Steps;
