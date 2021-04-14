@@ -42,7 +42,7 @@ run_bdd: $(RT_BDD)
 	$(OBJ)/$(RT_BDD) --features=../../src/features/
 
 # Build the ray-tracer itself.
-ray_tracer: ray_tracer.gpr
+ray_tracer: ray_tracer.gpr $(SRCS)
 	$(GPRBUILD) -p -XRAY_TRACER_MODE=$(RAY_TRACER_MODE) -Pray_tracer.gpr
 
 .PHONY: clean
