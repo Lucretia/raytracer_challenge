@@ -1,13 +1,17 @@
 package Tuples is
    pragma Pure;
 
+   Epsilon : constant := 0.00001;
+
+   function Equals (Left, Right : in Float) return Boolean is (if abs (Left - Right) < Epsilon then True else False);
+
    type Tuple_Index is (X, Y, Z, W);
    type Tuple is array (Tuple_Index) of Float;
 
    function Is_Point (T : in Tuple) return Boolean is (T (W) = 1.0);
    function Is_Vector (T : in Tuple) return Boolean is (T (W) = 0.0);
 
-   -- TODO - Make these types?
+   --  TODO - Make these types?
    subtype Point is Tuple;
    subtype Vector is Tuple;
 
