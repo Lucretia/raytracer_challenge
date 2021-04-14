@@ -27,43 +27,43 @@ package body Tuples.Steps is
       Assert_Equal (A (W), Expected);
    end And_A_W_Is;
 
-   procedure A_Is_A_Point is
+   procedure And_A_Is_A_Point is
    begin
       Assert (Is_Point (A));
-   end A_Is_A_Point;
+   end And_A_Is_A_Point;
 
-   procedure A_Is_Not_A_Vector is
+   procedure And_A_Is_Not_A_Vector is
    begin
       Assert (not Is_Vector (A));
-   end A_Is_Not_A_Vector;
+   end And_A_Is_Not_A_Vector;
 
-   procedure A_Is_Not_A_Point is
+   procedure And_A_Is_Not_A_Point is
    begin
       Assert (not Is_Point (A));
-   end A_Is_Not_A_Point;
+   end And_A_Is_Not_A_Point;
 
-   procedure A_Is_A_Vector is
+   procedure And_A_Is_A_Vector is
    begin
       Assert (Is_Vector (A));
-   end A_Is_A_Vector;
+   end And_A_Is_A_Vector;
 
    procedure Given_Point_P (X, Y, Z : Float) is
    begin
       P := Make_Point (X, Y, Z);
    end Given_Point_P;
 
-   procedure P_Is_A_Tuple (X, Y, Z, W : Float) is
+   procedure Then_P_Is_A_Tuple (X, Y, Z, W : Float) is
    begin
       Assert (P = Tuple'(X, Y, Z, W));
-   end P_Is_A_Tuple;
+   end Then_P_Is_A_Tuple;
 
    procedure Given_Vector_V (X, Y, Z : Float) is
    begin
       V := Make_Vector (X, Y, Z);
    end Given_Vector_V;
 
-   procedure V_Is_A_Tuple (X, Y, Z, W : Float) is
+   procedure Then_V_Is_A_Tuple (X, Y, Z, W : Float) is
    begin
       Assert (V = Tuple'(X, Y, Z, W));
-   end V_Is_A_Tuple;
+   end Then_V_Is_A_Tuple;
 end Tuples.Steps;

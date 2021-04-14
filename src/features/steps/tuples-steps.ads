@@ -15,30 +15,30 @@ package Tuples.Steps is
    procedure And_A_W_Is (Expected : Float);
 
    -- @and ^a is a point$
-   procedure A_Is_A_Point;
+   procedure And_A_Is_A_Point;
 
    -- @and ^a is not a vector$
-   procedure A_Is_Not_A_Vector;
+   procedure And_A_Is_Not_A_Vector;
 
    -- @and ^a is not a point$
-   procedure A_Is_Not_A_Point;
+   procedure And_A_Is_Not_A_Point;
 
    -- @and ^a is a vector$
-   procedure A_Is_A_Vector;
+   procedure And_A_Is_A_Vector;
 
    -- @given ^p ← point\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
    procedure Given_Point_P (X, Y, Z : Float);
 
    -- @then ^p = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
-   procedure P_Is_A_Tuple (X, Y, Z, W : Float);
+   procedure Then_P_Is_A_Tuple (X, Y, Z, W : Float);
 
    -- @given ^v ← vector\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
    procedure Given_Vector_V (X, Y, Z : Float);
 
    -- @then ^v = tuple\(([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?), ([-+]?\d+(?: \.\d+)?)\)$
-   procedure V_Is_A_Tuple (X, Y, Z, W : Float);
+   procedure Then_V_Is_A_Tuple (X, Y, Z, W : Float);
 private
-   A : Tuple;
-   P : Point;
-   V : Vector;
+   A  : Tuple;
+   P  : Point;
+   V  : Vector;
 end Tuples.Steps;
