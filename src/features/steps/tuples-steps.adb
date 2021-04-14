@@ -132,4 +132,9 @@ package body Tuples.Steps is
    begin
       Assert (-A = Tuple'(X, Y, Z, W));
    end Then_Tuple_Is_Negative_A;
+
+   procedure Then_A_Times_Scalar_Is_Tuple (Scalar, X, Y, Z, W : Float) is
+   begin
+      Assert (A * Scalar = Tuple'(X, Y, Z, W));
+   end Then_A_Times_Scalar_Is_Tuple;
 end Tuples.Steps;
