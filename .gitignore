@@ -1,0 +1,6 @@
+.ionide/
+.metals/
+.vscode/
+build/gnat/gen/
+thirdpary/
+.gitignore
