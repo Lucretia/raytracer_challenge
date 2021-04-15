@@ -28,11 +28,15 @@ SRCS		=	$(SRC)/rtch.ads \
 				$(SRC)/maths/rtch-maths-tuples.ads \
 				$(SRC)/maths/rtch-maths-points.ads \
 				$(SRC)/maths/rtch-maths-vectors.ad[sb] \
-				$(SRC)/colours/rtch-colours.ads
+				$(SRC)/colours/rtch-colours.ads \
+				$(SRC)/visuals/rtch-visuals.ads \
+				$(SRC)/visuals/rtch-visuals-canvases.ads
 STEPS		=	$(STEPSDIR)/rtch-maths-tuples-steps.ad[sb] \
-				$(STEPSDIR)/rtch-colours-steps.ad[sb]
+				$(STEPSDIR)/rtch-colours-steps.ad[sb] \
+				$(STEPSDIR)/rtch-visuals-canvases-steps.ad[sb]
 FEATURES	=	$(FEATURESDIR)/tuples.feature \
-				$(FEATURESDIR)/colours.feature
+				$(FEATURESDIR)/colours.feature \
+				$(FEATURESDIR)/canvases.feature
 
 #########################################################################################################################
 
