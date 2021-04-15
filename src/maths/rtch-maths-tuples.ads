@@ -6,10 +6,6 @@ package RTCH.Maths.Tuples is
    package Float_Elementary_Functions is new Ada.Numerics.Generic_Elementary_Functions (Float);
    use Float_Elementary_Functions;
 
-   Epsilon : constant := 0.00001;
-
-   function Equals (Left, Right : in Float) return Boolean is (if abs (Left - Right) < Epsilon then True else False);
-
    type Tuple_Index is (X, Y, Z, W);
    type Tuple is array (Tuple_Index) of Float;
 
