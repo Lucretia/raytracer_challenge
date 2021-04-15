@@ -11,22 +11,22 @@ package body RTCH.Maths.Tuples.Steps is
 
    procedure Then_A_X_Is (Expected : Float) is
    begin
-      Assert_Equal (A (X), Expected);
+      Assert_Equal (A.X, Expected);
    end Then_A_X_Is;
 
    procedure And_A_Y_Is (Expected : Float) is
    begin
-      Assert_Equal (A (Y), Expected);
+      Assert_Equal (A.Y, Expected);
    end And_A_Y_Is;
 
    procedure And_A_Z_Is (Expected : Float) is
    begin
-      Assert_Equal (A (Z), Expected);
+      Assert_Equal (A.Z, Expected);
    end And_A_Z_Is;
 
    procedure And_A_W_Is (Expected : Float) is
    begin
-      Assert_Equal (A (W), Expected);
+      Assert_Equal (A.W, Expected);
    end And_A_W_Is;
 
    procedure And_A_Is_A_Point is
@@ -163,9 +163,9 @@ package body RTCH.Maths.Tuples.Steps is
    procedure Then_Normalise_V_Is_Approximately_Vector (X, Y, Z : Float) is
       Normalised_V : constant Vector := Normalise (V);
    begin
-      Assert (Equals (Normalised_V (Tuples.X), X));
-      Assert (Equals (Normalised_V (Tuples.Y), Y));
-      Assert (Equals (Normalised_V (Tuples.Z), Z));
+      Assert (Equals (Normalised_V.X, X));
+      Assert (Equals (Normalised_V.Y, Y));
+      Assert (Equals (Normalised_V.Z, Z));
    end Then_Normalise_V_Is_Approximately_Vector;
 
    procedure When_Normalise_V_As_Norm is
