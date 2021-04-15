@@ -1,7 +1,7 @@
 with BDD.Asserts;  use BDD.Asserts;
 -- with BDD.Tables;   use BDD.Tables;
 
-package body Tuples.Steps is
+package body RTCH.Maths.Tuples.Steps is
    procedure Given_Tuple_A (X, Y, Z, W : Float) is
    begin
       A := Tuple'(X, Y, Z, W);
@@ -191,4 +191,4 @@ package body Tuples.Steps is
    begin
       Assert (Cross (V2, V1) = Make_Vector (X, Y, Z));
    end And_Cross_Of_V2_And_V1_Is;
-end Tuples.Steps;
+end RTCH.Maths.Tuples.Steps;
