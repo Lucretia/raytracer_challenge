@@ -21,8 +21,8 @@ CAT			=	cat
 
 RT_BDD		=	rt_bdd
 GEN_BDD		=	$(OBJ)/$(RT_BDD).adb $(OBJ)/$(RT_BDD).gpr
-SRCS		=	$(SRC)/tuples.ads
-STEPS		=	$(STEPSDIR)/tuples-steps.ad[sb]
+SRCS		=	$(SRC)/rtch.ads $(SRC)/maths/rtch-maths.ads $(SRC)/maths/rtch-maths-tuples.ads
+STEPS		=	$(STEPSDIR)/rtch-maths-tuples-steps.ad[sb]
 FEATURES	=	$(FEATURESDIR)/tuples.feature
 
 #########################################################################################################################
