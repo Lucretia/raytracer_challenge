@@ -1,3 +1,5 @@
+with RTCH.Maths.Vectors;
+
 package RTCH.Maths.Tuples.Steps is
    -- @given ^a ← tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Given_Tuple_A (X, Y, Z, W : Float);
@@ -112,13 +114,13 @@ package RTCH.Maths.Tuples.Steps is
 private
    A  : Tuple;
    P  : Point;
-   V  : Vector;
+   V  : Vectors.Vector;
    A1 : Tuple;
    A2 : Tuple;
    P1 : Point;
    P2 : Point;
-   V1 : Vector;
-   V2 : Vector;
-   Zero : Vector;
-   Norm : Vector;
+   V1 : Vectors.Vector;
+   V2 : Vectors.Vector;
+   Zero : Vectors.Vector;
+   Norm : Vectors.Vector;
 end RTCH.Maths.Tuples.Steps;

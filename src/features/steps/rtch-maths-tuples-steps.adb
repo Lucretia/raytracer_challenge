@@ -1,5 +1,6 @@
 with BDD.Asserts;  use BDD.Asserts;
 -- with BDD.Tables;   use BDD.Tables;
+with RTCH.Maths.Vectors; use RTCH.Maths.Vectors;
 
 package body RTCH.Maths.Tuples.Steps is
    procedure Given_Tuple_A (X, Y, Z, W : Float) is
@@ -59,7 +60,7 @@ package body RTCH.Maths.Tuples.Steps is
 
    procedure Given_Vector_V (X, Y, Z : Float) is
    begin
-      V := Make_Vector (X, Y, Z);
+      V := Vectors.Make_Vector (X, Y, Z);
    end Given_Vector_V;
 
    procedure Then_V_Is_A_Tuple (X, Y, Z, W : Float) is
@@ -94,7 +95,7 @@ package body RTCH.Maths.Tuples.Steps is
 
    procedure Then_P1_Minus_P2_Is_Vector (X, Y, Z : Float) is
    begin
-      Assert (P1 - P2 = Make_Vector (X, Y, Z));
+      Assert (P1 - P2 = Vectors.Make_Vector (X, Y, Z));
    end Then_P1_Minus_P2_Is_Vector;
 
    procedure Then_P_Minus_V_Is_Point (X, Y, Z : Float) is
@@ -104,28 +105,28 @@ package body RTCH.Maths.Tuples.Steps is
 
    procedure Given_Vector_V1 (X, Y, Z : Float) is
    begin
-      V1 := Make_Vector (X, Y, Z);
+      V1 := Vectors.Make_Vector (X, Y, Z);
    end Given_Vector_V1;
 
    procedure And_Given_Vector_V2 (X, Y, Z : Float) is
    begin
-      V2 := Make_Vector (X, Y, Z);
+      V2 := Vectors.Make_Vector (X, Y, Z);
    end And_Given_Vector_V2;
 
    procedure Then_V1_Minus_V2_Is_Vector (X, Y, Z : Float) is
    begin
-      Assert (V1 - V2 = Make_Vector (X, Y, Z));
+      Assert (V1 - V2 = Vectors.Make_Vector (X, Y, Z));
    end Then_V1_Minus_V2_Is_Vector;
 
    procedure Given_Zero_Vector (X, Y, Z : Float) is
    begin
       Assert (X = Y and Y = Z and Z = 0.0);
-      Assert (Zero = Make_Vector (X, Y, Z));
+      Assert (Zero = Vectors.Make_Vector (X, Y, Z));
    end Given_Zero_Vector;
 
    procedure Then_Zero_Minus_V_Is_Vector (X, Y, Z : Float) is
    begin
-      Assert (Zero - V = Make_Vector (X, Y, Z));
+      Assert (Zero - V = Vectors.Make_Vector (X, Y, Z));
    end Then_Zero_Minus_V_Is_Vector;
 
    procedure Then_Tuple_Is_Negative_A (X, Y, Z, W : Float) is
@@ -155,7 +156,7 @@ package body RTCH.Maths.Tuples.Steps is
 
    procedure Then_Normalise_V_Is_Vector (X, Y, Z : Float) is
    begin
-      Assert (Normalise (V) = Make_Vector (X, Y, Z));
+      Assert (Normalise (V) = Vectors.Make_Vector (X, Y, Z));
    end Then_Normalise_V_Is_Vector;
 
    procedure Then_Normalise_V_Is_Approximately_Vector (X, Y, Z : Float) is
@@ -184,11 +185,11 @@ package body RTCH.Maths.Tuples.Steps is
 
    procedure Then_Cross_Of_V1_And_V2_Is (X, Y, Z : Float) is
    begin
-      Assert (Cross (V1, V2) = Make_Vector (X, Y, Z));
+      Assert (Cross (V1, V2) = Vectors.Make_Vector (X, Y, Z));
    end Then_Cross_Of_V1_And_V2_Is;
 
    procedure And_Cross_Of_V2_And_V1_Is (X, Y, Z : Float) is
    begin
-      Assert (Cross (V2, V1) = Make_Vector (X, Y, Z));
+      Assert (Cross (V2, V1) = Vectors.Make_Vector (X, Y, Z));
    end And_Cross_Of_V2_And_V1_Is;
 end RTCH.Maths.Tuples.Steps;
