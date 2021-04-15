@@ -50,7 +50,7 @@ package Tuples is
                Z => Left (Z) - Right (Z),
                W => Left (W) - Right (W)));
 
-   -- TODO - Ada 2022: Add with Static.
+   --  TODO - Ada 2022: Add with Static.
    function Magnitude (V : in Vector) return Float is (Sqrt (V (X) ** 2 + V (Y) ** 2 + V (Z) ** 2 + V (W) ** 2));
    function Normalise (V : in Vector) return Vector;
 
