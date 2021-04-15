@@ -100,6 +100,9 @@ package Tuples.Steps is
 
    -- @then ^magnitude\(norm\) = 1$
    procedure Then_Magnitude_Norm_Is_One;
+
+   -- @then ^dot\(v1, v2\) = ([-+]?\d+\.?\d*)$
+   procedure Then_Dot_Of_V1_And_V2_Is (Scalar : Float);
 private
    A  : Tuple;
    P  : Point;

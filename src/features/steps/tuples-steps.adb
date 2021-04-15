@@ -176,4 +176,9 @@ package body Tuples.Steps is
       -- Have to use Equals here.
       Assert (Equals (Magnitude (Norm), 1.0));
    end Then_Magnitude_Norm_Is_One;
+
+   procedure Then_Dot_Of_V1_And_V2_Is (Scalar : Float) is
+   begin
+      Assert (Dot (V1, V2) = Scalar);
+   end Then_Dot_Of_V1_And_V2_Is;
 end Tuples.Steps;

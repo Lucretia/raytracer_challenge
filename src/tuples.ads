@@ -53,6 +53,11 @@ package Tuples is
    --  TODO - Ada 2022: Add with Static.
    function Magnitude (V : in Vector) return Float is (Sqrt (V (X) ** 2 + V (Y) ** 2 + V (Z) ** 2 + V (W) ** 2));
    function Normalise (V : in Vector) return Vector;
+   function Dot (V1, V2 : in Vector) return Float is
+      (V1 (X) * V2 (X) +
+       V1 (Y) * V2 (Y) +
+       V1 (Z) * V2 (Z) +
+       V1 (W) * V2 (W));
 
    function Make_Point (X1, Y1, Z1 : Float) return Point is (Point'(X => X1, Y => Y1, Z => Z1, W => 1.0));
    function Make_Vector (X1, Y1, Z1 : Float) return Vector is (Vector'(X => X1, Y => Y1, Z => Z1, W => 0.0));

@@ -99,3 +99,9 @@ Feature: Tuples
         Given v ← vector(1, 2, 3)
         When norm ← normalize(v)
         Then magnitude(norm) = 1
+
+    # Renamed these vectors from a/b to v1/v2 due to existing A variable.
+    Scenario: The dot product of two tuples
+        Given v1 ← vector(1, 2, 3)
+            And v2 ← vector(2, 3, 4)
+        Then dot(v1, v2) = 20
