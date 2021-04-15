@@ -30,4 +30,19 @@ package body RTCH.Visuals.Canvases.Steps is
          Assert (Pixel = Test_Colour);
       end loop;
    end And_For_All_Pixels_Equals;
+
+   procedure And_Colour_Red (Red, Green, Blue : Float) is
+   begin
+      Red_Colour := Make_Colour (Red, Green, Blue);
+   end And_Colour_Red;
+
+   procedure When_Write_Red_Pixel_To_C (X, Y : Positive) is
+   begin
+      Set_Pixel (C.all, X, Y, Red_Colour);
+   end When_Write_Red_Pixel_To_C;
+
+   procedure Then_Pixel_At_Is_Red (X, Y : Positive) is
+   begin
+      Assert (Get_Pixel (C.all, X, Y) = Red_Colour);
+   end Then_Pixel_At_Is_Red;
 end RTCH.Visuals.Canvases.Steps;

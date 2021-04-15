@@ -11,6 +11,9 @@ package RTCH.Visuals.Canvases with
    function Get_Width (C : in Canvas) return Positive is (C'Length (1));
    function Get_Height (C : in Canvas) return Positive is (C'Length (2));
 
+   procedure Set_Pixel (C : in out Canvas; X, Y : in Positive; Colour : in Colours.Colour);
+   function Get_Pixel (C : in Canvas; X, Y : in Positive) return Colour is (C (X, Y));
+
    -- type Canvas (Width, Height : Positive) is record
    --    Pixels : Pixel_Array (1 .. Width, 1 .. Height) := ((others => (others => Make_Colour (0.0, 0.0, 0.0))));
    -- end record;
