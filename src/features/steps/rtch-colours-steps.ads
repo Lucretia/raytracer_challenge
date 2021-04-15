@@ -27,6 +27,9 @@ package RTCH.Colours.Steps is
 
    -- @then ^c \* ([-+]?\d+\.?\d*) = color\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
    procedure Then_C_Times_Scalar_Is_Colour (Scalar, Red, Green, Blue : Float);
+
+   -- @then ^c1 \* c2 = color\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure Then_C1_Times_C2_Is_Colour (Red, Green, Blue : Float);
 private
    C  : Colour;
    C1 : Colour;

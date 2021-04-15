@@ -32,4 +32,11 @@ package RTCH.Colours with
       (Colour'(Red   => Left.Red   * Right,
                Green => Left.Green * Right,
                Blue  => Left.Blue  * Right));
+
+   function "*" (Left, Right : in Colour) return Colour is
+      (Colour'(Red   => Left.Red   * Right.Red,
+               Green => Left.Green * Right.Green,
+               Blue  => Left.Blue  * Right.Blue));
+
+   function Hadamard_Product (Left, Right : in Colour) return Colour renames "*";
 end RTCH.Colours;

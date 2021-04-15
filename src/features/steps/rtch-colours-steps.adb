@@ -45,4 +45,9 @@ package body RTCH.Colours.Steps is
    begin
       Assert (C * Scalar = Make_Colour (Red, Green, Blue));
    end Then_C_Times_Scalar_Is_Colour;
+
+   procedure Then_C1_Times_C2_Is_Colour (Red, Green, Blue : Float) is
+   begin
+      Assert (C1 * C2 = Make_Colour (Red, Green, Blue));
+   end Then_C1_Times_C2_Is_Colour;
 end RTCH.Colours.Steps;
