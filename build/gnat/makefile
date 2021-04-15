@@ -23,7 +23,11 @@ CAT			=	cat
 RT_BDD		=	rt_bdd
 GEN_BDD		=	$(OBJ)/$(RT_BDD).adb $(OBJ)/$(RT_BDD).gpr
 TESTSRCS	=	$(TESTSRC)/projectiles.adb
-SRCS		=	$(SRC)/rtch.ads $(SRC)/maths/rtch-maths.ads $(SRC)/maths/rtch-maths-tuples.ads
+SRCS		=	$(SRC)/rtch.ads \
+				$(SRC)/maths/rtch-maths.ads \
+				$(SRC)/maths/rtch-maths-tuples.ads \
+				$(SRC)/maths/rtch-maths-points.ads \
+				$(SRC)/maths/rtch-maths-vectors.ad[sb]
 STEPS		=	$(STEPSDIR)/rtch-maths-tuples-steps.ad[sb]
 FEATURES	=	$(FEATURESDIR)/tuples.feature
 
