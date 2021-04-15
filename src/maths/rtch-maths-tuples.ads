@@ -1,6 +1,6 @@
 with Ada.Numerics.Generic_Elementary_Functions;
 
-package Tuples is
+package RTCH.Maths.Tuples is
    pragma Preelaborate;
 
    package Float_Elementary_Functions is new Ada.Numerics.Generic_Elementary_Functions (Float);
@@ -66,4 +66,4 @@ package Tuples is
       (Make_Vector (X1 => A (Y) * B (Z) - A (Z) * B (Y),
                     Y1 => A (Z) * B (X) - A (X) * B (Z),
                     Z1 => A (X) * B (Y) - A (Y) * B (X)));
-end Tuples;
+end RTCH.Maths.Tuples;
