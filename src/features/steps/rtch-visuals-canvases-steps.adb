@@ -15,12 +15,12 @@ package body RTCH.Visuals.Canvases.Steps is
 
    procedure Then_C_Width_Is (W : Positive) is
    begin
-      Assert (C'Length (1) = W);
+      Assert (Get_Width (C.all) = W);
    end Then_C_Width_Is;
 
    procedure And_C_Height_Is (H : Positive) is
    begin
-      Assert (C'Length (2) = H);
+      Assert (Get_Height (C.all) = H);
    end And_C_Height_Is;
 
    procedure And_For_All_Pixels_Equals (Red, Green, Blue : Float) is
