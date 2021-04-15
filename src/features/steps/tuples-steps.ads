@@ -103,6 +103,12 @@ package Tuples.Steps is
 
    -- @then ^dot\(v1, v2\) = ([-+]?\d+\.?\d*)$
    procedure Then_Dot_Of_V1_And_V2_Is (Scalar : Float);
+
+   -- @then ^cross\(v1, v2\) = vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure Then_Cross_Of_V1_And_V2_Is (X, Y, Z : Float);
+
+   -- @and ^cross\(v2, v1\) = vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure And_Cross_Of_V2_And_V1_Is (X, Y, Z : Float);
 private
    A  : Tuple;
    P  : Point;

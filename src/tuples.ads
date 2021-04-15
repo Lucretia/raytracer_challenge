@@ -40,9 +40,13 @@ package Tuples is
    function Is_Point (T : in Tuple) return Boolean is (T (W) = 1.0);
    function Is_Vector (T : in Tuple) return Boolean is (T (W) = 0.0);
 
-   --  TODO - Make these types?
-   subtype Point is Tuple;
-   subtype Vector is Tuple;
+   subtype Point is Tuple; --  TODO - Make this a type?
+
+   function Make_Point (X1, Y1, Z1 : Float) return Point is (Point'(X => X1, Y => Y1, Z => Z1, W => 1.0));
+
+   subtype Vector is Tuple; --  TODO - Make this a type?
+
+   function Make_Vector (X1, Y1, Z1 : Float) return Vector is (Vector'(X => X1, Y => Y1, Z => Z1, W => 0.0));
 
    function "-" (Left, Right : in Point) return Vector is
       (Vector'(X => Left (X) - Right (X),
@@ -58,7 +62,8 @@ package Tuples is
        V1 (Y) * V2 (Y) +
        V1 (Z) * V2 (Z) +
        V1 (W) * V2 (W));
-
-   function Make_Point (X1, Y1, Z1 : Float) return Point is (Point'(X => X1, Y => Y1, Z => Z1, W => 1.0));
-   function Make_Vector (X1, Y1, Z1 : Float) return Vector is (Vector'(X => X1, Y => Y1, Z => Z1, W => 0.0));
+   function Cross (A, B : in Vector) return Vector is
+      (Make_Vector (X1 => A (Y) * B (Z) - A (Z) * B (Y),
+                    Y1 => A (Z) * B (X) - A (X) * B (Z),
+                    Z1 => A (X) * B (Y) - A (Y) * B (X)));
 end Tuples;

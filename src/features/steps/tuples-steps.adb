@@ -181,4 +181,14 @@ package body Tuples.Steps is
    begin
       Assert (Dot (V1, V2) = Scalar);
    end Then_Dot_Of_V1_And_V2_Is;
+
+   procedure Then_Cross_Of_V1_And_V2_Is (X, Y, Z : Float) is
+   begin
+      Assert (Cross (V1, V2) = Make_Vector (X, Y, Z));
+   end Then_Cross_Of_V1_And_V2_Is;
+
+   procedure And_Cross_Of_V2_And_V1_Is (X, Y, Z : Float) is
+   begin
+      Assert (Cross (V2, V1) = Make_Vector (X, Y, Z));
+   end And_Cross_Of_V2_And_V1_Is;
 end Tuples.Steps;
