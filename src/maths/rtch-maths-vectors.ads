@@ -1,4 +1,5 @@
 with RTCH.Maths.Tuples;
+with RTCH.Maths.Points;
 
 package RTCH.Maths.Vectors with
   Preelaborate is
@@ -11,7 +12,7 @@ package RTCH.Maths.Vectors with
               Tuples.Z => Z,
               Tuples.W => 0.0));
 
-   function "-" (Left, Right : in Tuples.Point) return Vector is
+   function "-" (Left, Right : in Points.Point) return Vector is
       (Vector'(Tuples.X => Left (Tuples.X) - Right (Tuples.X),
                Tuples.Y => Left (Tuples.Y) - Right (Tuples.Y),
                Tuples.Z => Left (Tuples.Z) - Right (Tuples.Z),

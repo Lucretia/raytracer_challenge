@@ -1,6 +1,7 @@
 with BDD.Asserts;  use BDD.Asserts;
 -- with BDD.Tables;   use BDD.Tables;
 with RTCH.Maths.Vectors; use RTCH.Maths.Vectors;
+with RTCH.Maths.Points; use RTCH.Maths.Points;
 
 package body RTCH.Maths.Tuples.Steps is
    procedure Given_Tuple_A (X, Y, Z, W : Float) is

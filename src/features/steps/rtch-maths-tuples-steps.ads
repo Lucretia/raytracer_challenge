@@ -1,4 +1,5 @@
 with RTCH.Maths.Vectors;
+with RTCH.Maths.Points;
 
 package RTCH.Maths.Tuples.Steps is
    -- @given ^a ← tuple\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
@@ -113,12 +114,12 @@ package RTCH.Maths.Tuples.Steps is
    procedure And_Cross_Of_V2_And_V1_Is (X, Y, Z : Float);
 private
    A  : Tuple;
-   P  : Point;
+   P  : Points.Point;
    V  : Vectors.Vector;
    A1 : Tuple;
    A2 : Tuple;
-   P1 : Point;
-   P2 : Point;
+   P1 : Points.Point;
+   P2 : Points.Point;
    V1 : Vectors.Vector;
    V2 : Vectors.Vector;
    Zero : Vectors.Vector;
