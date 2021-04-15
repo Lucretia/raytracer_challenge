@@ -3,9 +3,9 @@ package RTCH.Colours with
   Pure is
 
    type Colour is record
-      Red   : Float;
-      Green : Float;
-      Blue  : Float;
+      Red   : Float := 0.0;
+      Green : Float := 0.0;
+      Blue  : Float := 0.0;
    end record;
 
    function Make_Colour (Red, Green, Blue : Float) return Colour is
