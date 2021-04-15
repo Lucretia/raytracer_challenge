@@ -88,6 +88,18 @@ package Tuples.Steps is
 
    -- @then ^magnitude\(v\) = √([-+]?\d+\.?\d*)$
    procedure Then_Magnitude_Of_V_Is_Sqrt_Of (Result : Float);
+
+   -- @then ^normalize\(v\) = vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure Then_Normalise_V_Is_Vector (X, Y, Z : Float);
+
+   -- @then ^normalize\(v\) = approximately vector\(([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*), ([-+]?\d+\.?\d*)\)$
+   procedure Then_Normalise_V_Is_Approximately_Vector (X, Y, Z : Float);
+
+   -- @when ^norm ← normalize\(v\)$
+   procedure When_Normalise_V_As_Norm;
+
+   -- @then ^magnitude\(norm\) = 1$
+   procedure Then_Magnitude_Norm_Is_One;
 private
    A  : Tuple;
    P  : Point;
@@ -99,4 +111,5 @@ private
    V1 : Vector;
    V2 : Vector;
    Zero : Vector;
+   Norm : Vector;
 end Tuples.Steps;

@@ -152,4 +152,28 @@ package body Tuples.Steps is
    begin
       Assert (Magnitude (V) = Sqrt (Result));
    end Then_Magnitude_Of_V_Is_Sqrt_Of;
+
+   procedure Then_Normalise_V_Is_Vector (X, Y, Z : Float) is
+   begin
+      Assert (Normalise (V) = Make_Vector (X, Y, Z));
+   end Then_Normalise_V_Is_Vector;
+
+   procedure Then_Normalise_V_Is_Approximately_Vector (X, Y, Z : Float) is
+      Normalised_V : constant Vector := Normalise (V);
+   begin
+      Assert (Equals (Normalised_V (Tuples.X), X));
+      Assert (Equals (Normalised_V (Tuples.Y), Y));
+      Assert (Equals (Normalised_V (Tuples.Z), Z));
+   end Then_Normalise_V_Is_Approximately_Vector;
+
+   procedure When_Normalise_V_As_Norm is
+   begin
+      Norm := Normalise (V);
+   end When_Normalise_V_As_Norm;
+
+   procedure Then_Magnitude_Norm_Is_One is
+   begin
+      -- Have to use Equals here.
+      Assert (Equals (Magnitude (Norm), 1.0));
+   end Then_Magnitude_Norm_Is_One;
 end Tuples.Steps;
