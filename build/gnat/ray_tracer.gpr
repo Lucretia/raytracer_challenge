@@ -6,7 +6,7 @@ project Ray_Tracer is
                         "--driver=rt_bdd");
    end GNATBDD;
 
-   for Source_Dirs     use ("../../src", "../../src/maths");
+   for Source_Dirs     use ("../../src", "../../src/maths", "../../src/colours");
    for Object_Dir      use "gen/" & Common.Mode & "/.obj";
    for Library_ALI_Dir use "gen/" & Common.Mode & "/.obj/ali";
    for Exec_Dir        use "gen/" & Common.Mode;
